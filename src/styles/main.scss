@@ -4,4 +4,70 @@
 
 body {
   background: $c-gray;
+  padding-bottom: 100px;
+}
+
+.container {
+  max-width: 800px;
+  padding: 0 30px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heading {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(109, 109, 109);
+  font-size: 26px;
+}
+
+.charts-round {
+  display: flex;
+  align-items: center;
+}
+
+.chart-round {
+  display: inline-block;
+  max-width: 300px;
+}
+
+.chart-line {
+  background-color: #1a4e64;
+}
+
+.chart-legend ul {
+  text-align: left;
+  list-style-type: none;
+  vertical-align: middle;
+  margin-top: -30px;
+  margin-left: 30px;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(109, 109, 109);
+
+  li {
+    position: relative;
+    margin-bottom: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -25px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+
+    &:nth-child(1)::before {
+      background-color: #c77732;
+    }
+    &:nth-child(2)::before {
+      background-color: #194c61;
+    }
+    &:nth-child(3)::before {
+      background-color: #2a6f90;
+    }
+  }
 }
